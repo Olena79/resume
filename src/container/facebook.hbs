@@ -1,0 +1,58 @@
+<h1><u>{{name}}</u></h1>
+<br>
+<hr><br>
+<div>
+    <ul>
+        {{#each users}}
+        <li>
+            <h2>{{name}}</h2>
+            ({{gender}})
+            <br>
+            <small><em>age:</em></small>{{age}}
+            <br>
+            <small><em>id:</em></small>{{id}}
+            <br>
+            <br>
+            <div class="btn-group">
+                <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Friends of
+                </button>
+                <ul class="dropdown-menu">
+                    {{#each friends}}
+                    <li>
+                        <b><em>{{name}}</em></b>
+                        ({{gender}})
+                        <br>
+                        <small><em>age:</em></small>{{age}}
+                        <br>
+                        <small><em>id:</em></small>{{id}}
+                        <br>
+                        <br>
+                        <b>Friends of:</b>
+                        <ul>
+                            {{#each mutual_friends}}
+                            <li>
+                                <b>{{name}}</b>
+                                ({{gender}})
+                                <br>
+                                <small><em>age:</em></small>{{age}}
+                                <br>
+                                <small><em>id:</em></small>{{id}}
+                                <hr><br>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        <br>
+                        <hr>
+                        <hr><br>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <br>
+            <hr><br>
+        </li>
+        {{/each}}
+    </ul>
+</div>

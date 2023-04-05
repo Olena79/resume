@@ -1,9 +1,11 @@
 <h1><u>{{name}}</u></h1>
 <br>
-<hr><br>
+<hr>
+<hr>
+<br>
 <div>
-    <ul>
-        {{#each users}}
+    <ol>
+        {{#with users.[0]}}
         <li>
             <h2>{{name}}</h2>
             ({{gender}})
@@ -13,12 +15,9 @@
             <small><em>id:</em></small>{{id}}
             <br>
             <br>
-            <div class="btn-group">
-                <button class="btn btn-success btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Friends of
-                </button>
-                <ul class="dropdown-menu">
+            <div>
+                <p><b>Friends of {{name}}</b></p>
+                <ol>
                     {{#each friends}}
                     <li>
                         <b><em>{{name}}</em></b>
@@ -29,8 +28,8 @@
                         <small><em>id:</em></small>{{id}}
                         <br>
                         <br>
-                        <b>Friends of:</b>
-                        <ul>
+                        <p><b>Friends of {{name}}</b></p>
+                        <ol>
                             {{#each mutual_friends}}
                             <li>
                                 <b>{{name}}</b>
@@ -42,17 +41,145 @@
                                 <hr><br>
                             </li>
                             {{/each}}
-                        </ul>
+                        </ol>
                         <br>
-                        <hr>
-                        <hr><br>
+                        <br>
                     </li>
                     {{/each}}
-                </ul>
+                </ol>
+                <p><b>Groups:</b></p>
+                <ol>
+                    {{#each groups}}
+                    <li>
+                        <b><em>{{name}}</em></b>
+                        <p><em><small>{{description}}</small></em></p>
+                        <small><em>id:</em></small>{{id}}
+                        <br>
+                        <br>
+                        <br>
+                        <p><b>Members of {{name}}</b></p>
+                        <ol>
+                            {{#each members}}
+                            <li>
+                                <b>{{name}}</b>
+                                ({{gender}})
+                                <br>
+                                <small><em>age:</em></small>{{age}}
+                                <br>
+                                <small><em>id:</em></small>{{id}}
+                                <hr><br>
+                            </li>
+                            {{/each}}
+                        </ol>
+                        <br>
+                        <br>
+                    </li>
+                    {{/each}}
+                </ol>
             </div>
             <br>
-            <hr><br>
+            <hr>
+            <hr>
+            <hr>
+            <br>
         </li>
-        {{/each}}
-    </ul>
+        {{/with}}
+        </ul>
+</div>
+<div>
+    <ol>
+        {{#with users.[1]}}
+        <li>
+            <h2>{{name}}</h2>
+            ({{gender}})
+            <br>
+            <small><em>age:</em></small>{{age}}
+            <br>
+            <small><em>id:</em></small>{{id}}
+            <br>
+            <br>
+            <div>
+                <p><b>Friends of {{name}}</b></p>
+                <ol>
+                    {{#each friends}}
+                    <li>
+                        <b><em>{{name}}</em></b>
+                        ({{gender}})
+                        <br>
+                        <small><em>age:</em></small>{{age}}
+                        <br>
+                        <small><em>id:</em></small>{{id}}
+                        <br>
+                        <br>
+                        <p><b>Friends of {{name}}</b></p>
+                        <ol>
+                            {{#each mutual_friends}}
+                            <li>
+                                <b>{{name}}</b>
+                                ({{gender}})
+                                <br>
+                                <small><em>age:</em></small>{{age}}
+                                <br>
+                                <small><em>id:</em></small>{{id}}
+                                <br>
+                                <ol>
+                                    {{#each mutual_friends}}
+                                    <li>
+                                        <b>{{name}}</b>
+                                        ({{gender}})
+                                        <br>
+                                        <small><em>age:</em></small>{{age}}
+                                        <br>
+                                        <small><em>id:</em></small>{{id}}
+                                        <hr><br>
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                <hr><br>
+                            </li>
+                            {{/each}}
+                        </ol>
+                        <br>
+                        <br>
+                        <p><b>Groups:</b></p>
+                        <ol>
+                            {{#each groups}}
+                            <li>
+                                <b><em>{{name}}</em></b>
+                                <p><em><small>{{description}}</small></em></p>
+                                <small><em>id:</em></small>{{id}}
+                                <br>
+                                <br>
+                                <br>
+                                <p><b>Members of {{name}}</b></p>
+                                <ol>
+                                    {{#each members}}
+                                    <li>
+                                        <b>{{name}}</b>
+                                        ({{gender}})
+                                        <br>
+                                        <small><em>age:</em></small>{{age}}
+                                        <br>
+                                        <small><em>id:</em></small>{{id}}
+                                        <hr><br>
+                                    </li>
+                                    {{/each}}
+                                </ol>
+                                <br>
+                                <br>
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <br>
+            <hr>
+            <hr>
+            <hr>
+            <br>
+        </li>
+        {{/with}}
+        </ul>
 </div>

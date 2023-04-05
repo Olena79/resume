@@ -1,0 +1,155 @@
+<main>
+    <div>
+        {{#with navigation.links.[0]}}
+        <a href="https://github.com/">{{text}}</a>
+        {{/with}}
+        {{#with navigation.links.[1]}}
+        <a href="https://github.com/">{{text}}</a>
+        {{/with}}
+        {{#with navigation.links.[2]}}
+        <a href="https://github.com/">{{text}}</a>
+        {{/with}}
+        <button class="btn btn-primary" href="https://nodejs.org/en/">{{navigation.button.text}}</button>
+    </div>
+
+
+
+
+    <br>
+    <hr>
+    <br>
+
+
+
+    <div>
+        {{#with header}}
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        <button class="btn btn-primary" href="https://www.youtube.com/">
+            {{button.text}}
+        </button>
+        {{/with}}
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+
+    <h2>{{city.title}}</h2>
+
+
+    <div class="row">
+        <div class="col-5">
+            <div class="card">
+                {{#with city.cards.[0]}}
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="New York">
+                <br>
+                <p class="card-title">{{title}}</p>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    <p><button class="btn btn-primary" href="https://github.com/">{{button.text}}</button></p>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+
+
+
+        <div class="col-5">
+            <div class="card">
+                {{#with city.cards.[1]}}
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Paris">
+                <br>
+                <p class="card-title">{{title}}</p>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    <p><button class="btn btn-primary" href="https://github.com/">{{button.text}}</button></p>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+
+
+
+
+        <div class="col-5">
+            <div class="card">
+                {{#with city.cards.[2]}}
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Tokyo">
+                <br>
+                <p class="card-title">{{title}}</p>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    <p><button class="btn btn-primary" href="https://github.com/">{{button.text}}</button></p>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+
+
+
+        <div class="col-5">
+            <div class="card">
+                {{#with city.cards.[3]}}
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Sydney">
+                <br>
+                <p class="card-title">{{title}}</p>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    <p><button class="btn btn-primary" href="https://github.com/">{{button.text}}</button></p>
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <div>
+        <p>
+        <h2>{{winner.title}}</h2>
+        </p>
+        <div>
+            {{#with winner.table}}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        {{#each head}}
+
+                        <th>
+                            {{this}}
+                        </th>
+
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {{#each user}}
+                        <th>{{place}}</th>
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{nickname}}</td>
+                        {{/each}}
+                        <br>
+                    </tr>
+                </tbody>
+            </table>
+            {{/with}}
+        </div>
+    </div>
+
+
+
+
+
+
+
+</main>

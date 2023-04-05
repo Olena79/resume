@@ -1,0 +1,162 @@
+<div>
+    <strong>
+        <u>
+            <h1>{{name}}</h1>
+        </u>
+    </strong>
+    <br>
+    <br>
+    <b><em>{{description}}</em></b>
+    <br>
+    <br>
+    <small>category:</small>
+    {{category}}
+    <br>
+    <small>weight:</small> {{features.weight}}
+    <br>
+    <small>operating system:</small> {{features.operating_system}}
+    <br><br><br>
+
+    <h3>price:<u>{{price}}</u></h3>
+</div>
+<br>
+<hr>
+<br>
+<div><strong><em><u>Features:</u></em></strong>
+    <br>
+    <br>
+    {{#with features}}
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Processor</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>brand:</em> {{processor.brand}}</a></li>
+            <li><a class="dropdown-item"><em>model:</em> {{processor.model}}</a></li>
+            <li><a class="dropdown-item"><em>speed:</em> {{processor.speed}}</a></li>
+            <li><a class="dropdown-item"><em>cores:</em> {{processor.cores}}</a></li>
+            <li><a class="dropdown-item"><em>cache:</em> {{processor.cache}}</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Memory</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>type:</em> {{memory.type}}</a></li>
+            <li><a class="dropdown-item"><em>model:</em> {{memory.model}}</a></li>
+            <li><a class="dropdown-item"><em>size:</em> {{memory.size}}</a></li>
+
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Storage</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>type:</em> {{storage.type}}</a></li>
+            <li><a class="dropdown-item"><em>size:</em> {{storage.size}}</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Display</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>size:</em> {{display.size}}</a></li>
+            <li><a class="dropdown-item"><em>resolution:</em> {{display.resolution}}</a></li>
+            <li><a class="dropdown-item"><em>color space:</em> {{display.color_space}}</a></li>
+            <li><a class="dropdown-item"><em>brightness:</em> {{display.brightness}}</a></li>
+            <li><a class="dropdown-item"><em>refresh rate:</em> {{display.refresh_rate}}</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Graphics</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>brand:</em> {{graphics.brand}}</a></li>
+            <li><a class="dropdown-item"><em>model:</em> {{graphics.model}}</a></li>
+            <li><a class="dropdown-item"><em>memory:</em> {{graphics.memory}}</a></li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Ports</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {{#each ports}}
+            <li><a class="dropdown-item">
+                    <b>Port:</b>
+                    <ul>
+                        <li><em>type:</em> {{type}} </li>
+                        <li><em>count:</em> {{count}} </li>
+                        <li><em>type:</em>
+                            <ul>
+                                {{#each features}}
+                                <li> {{this}} </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    </ul>
+                </a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Battery</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>type:</em> {{battery.type}}</a></li>
+            <li><a class="dropdown-item"><em>capacity:</em> {{battery.capacity}}</a></li>
+            <li><a class="dropdown-item"><em>life:</em> {{battery.life}}</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Dimensions</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item"><em>height:</em> {{dimensions.height}}</a></li>
+            <li><a class="dropdown-item"><em>width:</em> {{dimensions.width}}</a></li>
+            <li><a class="dropdown-item"><em>depth:</em> {{dimensions.depth}}</a></li>
+
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-info">Acessories</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {{#each accessories}}
+            <li><a class="dropdown-item">{{name}}
+                    <br>
+                    <u><small><em>price</em></small> {{price}}</u></a></li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/with}}
+    <br>
+    <br>
+    <hr>
+</div>

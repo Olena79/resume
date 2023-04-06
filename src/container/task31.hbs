@@ -117,32 +117,30 @@
         <h2>{{winner.title}}</h2>
         </p>
         <div>
-            {{#with winner.table}}
-            <table class="table table-bordered">
+            <table class="table">
+                {{#with winner.table}}
                 <thead>
                     <tr>
                         {{#each head}}
-
                         <th>
                             {{this}}
                         </th>
-
                         {{/each}}
                     </tr>
                 </thead>
                 <tbody>
+                    {{#each user}}
                     <tr>
-                        {{#each user}}
                         <th>{{place}}</th>
                         <td>{{name}}</td>
                         <td>{{surname}}</td>
                         <td>{{nickname}}</td>
-                        {{/each}}
-                        <br>
                     </tr>
+                    {{/each}}
                 </tbody>
+                {{/with}}
             </table>
-            {{/with}}
+
         </div>
     </div>
 
@@ -152,6 +150,47 @@
     <hr>
     <br>
 
+    <h2>{{gallery.title}}</h2>
+
+
+    <div class="row g-5">
+        {{#each gallery.cards}}
+        <div class="col-4">
+
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="card-header">
+                        {{name}}
+                    </div>
+                </div>
+                <ul class="list-group">
+
+
+                    {{#each items}}
+                    <li class="list-group-item">
+                        {{this}}
+                    </li>
+                    {{/each}}
+
+
+                </ul>
+
+            </div>
+
+
+
+
+
+        </div>
+        {{/each}}
+    </div>
+
+
+
+    <br>
+    <hr>
+    <br>
 
 
 
@@ -219,9 +258,133 @@
         </div>
     </div>
 
+    <br>
+    <hr>
+    <br>
+
+
+    <div class="row g-5">
+        {{#each rest.cards}}
+        <div class="col-5">
+            <div class="card text-center">
+                <div class="card-header">{{header}}</div>
+                <div class="card-body">
+                    <h6>{{title}}</h6>
+                    <p> {{description}}</p>
+                    <p><button class="btn btn-primary">{{button}}</button></p>
+                    <div class="card-footer">{{footer}}</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 
 
 
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+    <p class="display-6">{{proposition.title}}</p>
+
+
+    <div class="row g-5">
+        {{#each proposition.card}}
+        <div class="col-4">
+
+            <div class="card text-bg-warning">
+
+                <div class="card-body">
+                    <div class="card-header">
+                        {{header}}
+                    </div>
+                    <div>
+                        <p>{{title}}</p>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+
+    <p>
+    <h5>{{footer.title}}</h5>
+    </p>
+
+    <div class="row">
+        <section class="col-12">
+            {{#with footer.navigation.[0]}}
+            <a class="btn btn-outline-light" href="https://github.com/">{{text}}</a>
+            {{/with}}
+
+
+            {{#with footer.navigation.[1]}}
+            <a class="btn btn-outline-dark" href="https://www.google.com/">{{text}}</a>
+            {{/with}}
+
+
+
+            {{#with footer.navigation.[2]}}
+            <a class="btn btn-outline-info" href="https://www.youtube.com/">{{text}}</a>
+            {{/with}}
+
+        </section>
+
+    </div>
+    <br>
+    <div>
+        <div>
+            {{#with footer.socialMedia.[0]}}
+            <a href="https://www.facebook.com/" class="btn btn-outline-light">{{name}}</a>
+            {{/with}}
+
+
+            {{#with footer.socialMedia.[1]}}
+            <a href="https://twitter.com/" class="btn btn-outline-dark">{{name}}</a>
+            {{/with}}
+
+
+
+            {{#with footer.socialMedia.[2]}}
+            <a class="btn btn-outline-info" href="https://www.instagram.com/">{{name}}</a>
+            {{/with}}
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <div>
+            {{#with footer.partners.[0]}}
+            <a class="btn btn-outline-light" href="https://www.acme.com/">{{name}}</a>
+            {{/with}}
+
+
+            {{#with footer.partners.[1]}}
+            <a class="btn btn-outline-dark" href="https://www.globex.com/">{{name}}</a>
+            {{/with}}
+
+
+
+            {{#with footer.partners.[2]}}
+            <a class="btn btn-outline-info" href="https://www.starkindustries.com/">{{name}}</a>
+            {{/with}}
+
+        </div>
+    </div>
 
 
 

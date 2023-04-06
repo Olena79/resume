@@ -11,16 +11,9 @@
         {{/with}}
         <button class="btn btn-primary" href="https://nodejs.org/en/">{{navigation.button.text}}</button>
     </div>
-
-
-
-
     <br>
     <hr>
     <br>
-
-
-
     <div>
         {{#with header}}
         <h1>{{title}}</h1>
@@ -30,17 +23,10 @@
         </button>
         {{/with}}
     </div>
-
-
     <br>
     <hr>
     <br>
-
-
-
     <h2>{{city.title}}</h2>
-
-
     <div class="row g-5">
         <div class="col-5">
             <div class="card">
@@ -105,13 +91,9 @@
             </div>
         </div>
     </div>
-
-
     <br>
     <hr>
     <br>
-
-
     <div>
         <p>
         <h2>{{winner.title}}</h2>
@@ -143,61 +125,34 @@
 
         </div>
     </div>
-
-
-
     <br>
     <hr>
     <br>
-
     <h2>{{gallery.title}}</h2>
-
-
-    <div class="row g-5">
+    <div class="row g-1">
         {{#each gallery.cards}}
         <div class="col-4">
-
             <div class="card">
-
                 <div class="card-body">
                     <div class="card-header">
                         {{name}}
                     </div>
                 </div>
                 <ul class="list-group">
-
-
                     {{#each items}}
                     <li class="list-group-item">
                         {{this}}
                     </li>
                     {{/each}}
-
-
                 </ul>
-
             </div>
-
-
-
-
-
         </div>
         {{/each}}
     </div>
-
-
-
     <br>
     <hr>
     <br>
-
-
-
-
     <p class="display-3">{{relaxion.title}}</p>
-
-
     <div class="row g-5">
         <div class="col-5">
             <div class="card text-bg-secondary">
@@ -211,9 +166,6 @@
                 {{/with}}
             </div>
         </div>
-
-
-
         <div class="col-5">
             <div class="card text-bg-secondary">
                 {{#with relaxion.cards.[1]}}
@@ -257,12 +209,9 @@
             </div>
         </div>
     </div>
-
     <br>
     <hr>
     <br>
-
-
     <div class="row g-5">
         {{#each rest.cards}}
         <div class="col-5">
@@ -278,26 +227,15 @@
         </div>
         {{/each}}
     </div>
-
-
-
-
     <br>
     <hr>
     <br>
-
-
-
-
-
     <p class="display-6">{{proposition.title}}</p>
-
-
     <div class="row g-5">
         {{#each proposition.card}}
         <div class="col-4">
 
-            <div class="card text-bg-warning">
+            <div class="card text-bg-warning text-light">
 
                 <div class="card-body">
                     <div class="card-header">
@@ -308,85 +246,53 @@
                         <p>{{description}}</p>
                     </div>
                 </div>
-
             </div>
         </div>
         {{/each}}
     </div>
-
-
     <br>
     <hr>
     <br>
-
-
-
     <p>
     <h5>{{footer.title}}</h5>
     </p>
-
-    <div class="row">
-        <section class="col-12">
+    <div>
+        <div>
             {{#with footer.navigation.[0]}}
-            <a class="btn btn-outline-light" href="https://github.com/">{{text}}</a>
+            <a class="btn btn-link btn-info text-primary" href="https://github.com/">{{text}}</a>
             {{/with}}
-
 
             {{#with footer.navigation.[1]}}
             <a class="btn btn-outline-dark" href="https://www.google.com/">{{text}}</a>
             {{/with}}
 
-
-
             {{#with footer.navigation.[2]}}
             <a class="btn btn-outline-info" href="https://www.youtube.com/">{{text}}</a>
             {{/with}}
-
-        </section>
-
-    </div>
-    <br>
-    <div>
+        </div>
+        <br>
         <div>
             {{#with footer.socialMedia.[0]}}
-            <a href="https://www.facebook.com/" class="btn btn-outline-light">{{name}}</a>
+            <a href="https://www.facebook.com/" class="btn btn-link btn-info text-primary">{{name}}</a>
             {{/with}}
-
-
             {{#with footer.socialMedia.[1]}}
             <a href="https://twitter.com/" class="btn btn-outline-dark">{{name}}</a>
             {{/with}}
-
-
-
             {{#with footer.socialMedia.[2]}}
             <a class="btn btn-outline-info" href="https://www.instagram.com/">{{name}}</a>
             {{/with}}
-
         </div>
-    </div>
-    <br>
-    <div>
+        <br>
         <div>
             {{#with footer.partners.[0]}}
-            <a class="btn btn-outline-light" href="https://www.acme.com/">{{name}}</a>
+            <a class="btn btn-link btn-info text-primary" href="https://www.acme.com/">{{name}}</a>
             {{/with}}
-
-
             {{#with footer.partners.[1]}}
             <a class="btn btn-outline-dark" href="https://www.globex.com/">{{name}}</a>
             {{/with}}
-
-
-
             {{#with footer.partners.[2]}}
             <a class="btn btn-outline-info" href="https://www.starkindustries.com/">{{name}}</a>
             {{/with}}
-
         </div>
     </div>
-
-
-
-
 </main>

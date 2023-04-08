@@ -1,0 +1,72 @@
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each list}}
+        <li>
+            {{#if @first}} <button>{{name}}</button>{{/if}}
+
+            <span>{{name}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr class="my-6">
+
+
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each list}}
+        <li>
+            <button{{#if @last}}Disabled{{/if}}>{{name}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr class="my-6">
+
+
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each list}}
+        <li>
+            {{#if @last}} <button>{{name}}</button>{{/if}}
+
+            <button>{{name}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr class="my-6">
+
+
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each list}}
+        <li>
+            <button{{#if @last}}Disabled{{/if}}>{{name}} - {{@index}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr class="my-6">
+
+
+<div class="ms-3 mt-5">
+    <ul>
+        {{#each user}}
+        <li>
+            {{@key}} -
+            {{#if value}}
+            {{value}}
+            {{else}}
+            {{text}}
+            {{/if}},
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<hr class="my-6">

@@ -1,0 +1,195 @@
+<main>
+
+
+
+    <div class="card">
+        <div class="row g-5">
+            <div class="col-7">
+                <h2>{{navigation.Logo}}</h2>
+            </div>
+            <div class="col-5">
+                <div class="nav">
+                    {{#with navigation.links.[0]}}
+                    <div class="nav-item">
+                        <a href="https://github.com/" class="nav-link">{{text}}</a>
+                    </div>
+                    {{/with}}
+                    {{#with navigation.links.[1]}}
+                    <div class="nav-item">
+                        <a href="https://www.google.com/" class="nav-link">{{text}}</a>
+                    </div>
+                    {{/with}}
+                    {{#with navigation.links.[2]}}
+                    <div class="nav-item">
+                        <a href="https://www.youtube.com/" class="nav-link disabled">{{text}}</a>
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <p class="text-center display-6 mt-5 mb-2">{{newsBlock.title}}</p>
+
+
+
+
+
+    <div class="row">
+        {{#each newsBlock.cards}}
+        <div class="col-3 mb-2">
+            <div class="card text-bg-dark">
+                <div class="card-header">
+                    {{title}}
+                    {{#if isNew}}
+                    <span class="badge text-bg-success text-light rounded-pill">
+                        New
+                    </span>
+                    {{/if}}
+
+                    {{#if isTop}}
+                    <span class="badge text-bg-danger text-light rounded-pill">
+                        Top
+                    </span>
+                    {{/if}}
+                </div>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+    <hr class="my-6">
+
+
+    <div class="row gy-3">
+        {{#with goodsBlock}}
+        <div class="col-12">
+            <div class="nav nav-tabs">
+                {{#each tabs}}
+                <div class="nav-item">
+                    {{#if isActive}}
+                    <a href="#" class="nav-link active">
+                        {{text}}
+                    </a>
+                    {{else}}
+                    {{#unless isDisabled}}
+                    <a href="#" class="nav-link">
+                        {{text}}
+                    </a>
+                    {{/unless}}
+                    {{/if}}
+                    {{#if isDisabled}}
+                    <a href="#" class="nav-link disabled">
+                        {{text}}
+                    </a>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{#each cards}}
+        <div class="col-4">
+            <div class="card">
+                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Картинка тут">
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{title}}
+                        {{#if isHot}}
+                        <span class="badge text-bg-warning text-light text-uppercase rounded-pill">
+                            Hot
+                        </span>
+                        {{/if}}
+                        {{#if isNew}}
+                        <span class="badge text-bg-primary text-light rounded-pill">
+                            New
+                        </span>
+                        {{/if}}
+                    </h5>
+                    <p> {{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+
+
+    <hr class="my-6">
+
+
+    <div class="my-5">
+        <div class="card text-bg-dark p-3">
+            <div class="row gx-5">
+                <div class="col-6">
+                    <h2>{{subscribe.header}}</h2>
+                    <p>{{subscribe.description}}</p>
+                </div>
+                <div class="col-6">
+                    <div class="nav">
+                        {{#with subscribe.buttons.[0]}}
+                        <div class="my-4 mx-2">
+                            <a href="https://www.youtube.com/"><button
+                                    class="text-bg-primary text-light">{{text}}</button></a>
+                        </div>
+                        {{/with}}
+                        {{#with subscribe.buttons.[1]}}
+                        <div class="my-4 mx-2">
+                            <a href="https://www.google.com/"><button
+                                    class="text-bg-primary text-light">{{text}}</button></a>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="my-6">
+
+
+    <div class="my-5">
+        {{#with service}}
+        <div class="card text-bg-success text-center">
+            <div class="card-body">
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+                {{#with buttons.[0]}}
+                <a href="https://www.youtube.com/"><button class="btn btn-primary">{{text}}</button></a>
+                {{/with}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+
+    <hr class="my-6">
+
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2">
+            {{#each this}}
+            <div>
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">
+                    {{this.text}}
+                </a>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+
+
+</main>

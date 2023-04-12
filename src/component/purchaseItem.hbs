@@ -20,7 +20,10 @@
             <div class="col-2">
                 {{#with button}}
                 {{#if isPrimary}}
-                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                <a href="{{link}}" class="btn btn-primary">
+                    {{text}}
+                    <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
+                </a>
                 {{/if}}
                 {{/with}}
             </div>

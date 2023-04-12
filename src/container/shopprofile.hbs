@@ -41,13 +41,22 @@
         <div class="col-8 my-4">
             {{#each buttons}}
             {{#if isSuccess}}
-            <a href="{{link}}" class="btn btn-success me-2">{{text}}</a>
+            <a href="{{link}}" class="btn btn-success me-2">
+                <i class="fa-solid fa-magnifying-glass" style="color: #90f275;"></i>
+                {{text}}
+            </a>
             {{/if}}
             {{#if isOutline}}
-            <a href="{{link}}" class="btn btn-outline-success me-2">{{text}}</a>
+            <a href="{{link}}" class="btn btn-outline-success me-2">
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: #9c9fa5;"></i>
+                {{text}}
+            </a>
             {{/if}}
             {{#if isDanger}}
-            <a href="{{link}}" class="btn btn-outline-danger me-2">{{text}}</a>
+            <a href="{{link}}" class="btn btn-outline-danger me-2">
+                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                {{text}}
+            </a>
             {{/if}}
             {{/each}}
         </div>
@@ -88,7 +97,10 @@
                             {{#with buttons.[0]}}
 
                             {{#if isPrimary}}
-                            <a href="{{blink}}" class="btn btn-primary">{{text}}</a>
+                            <a href="{{blink}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
 
                             {{/with}}
@@ -104,7 +116,10 @@
                             </b>
                             {{#with buttons.[1]}}
                             {{#if isSecondary}}
-                            <a href="{{blink}}" class="btn btn-outline-secondary">{{text}}</a>
+                            <a href="{{blink}}" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-eraser" style="color: #8f8f8f;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
                             {{/with}}
                         </div>
@@ -119,7 +134,10 @@
                             </b>
                             {{#with buttons.[2]}}
                             {{#if isDanger}}
-                            <a href="{{link}}" class="btn btn-outline-danger">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-outline-danger">
+                                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
                             {{/with}}
                         </div>
@@ -141,7 +159,10 @@
                             </b>
                             <p>{{phone}}</p>
                             {{#with button}}
-                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
                             {{/with}}
                             {{/with}}
                         </div>
@@ -152,7 +173,10 @@
                             </b>
                             <p>{{phone}}</p>
                             {{#with button}}
-                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
                             {{/with}}
                             {{/with}}
                         </div>
@@ -175,7 +199,10 @@
                             {{/with}}
                             {{#with buttons.[0]}}
                             {{#if isPrimary}}
-                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
                             {{/with}}
                             {{/with}}
@@ -190,7 +217,10 @@
                             {{/with}}
                             {{#with buttons.[1]}}
                             {{#if isSecondary}}
-                            <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-eraser" style="color: #8f8f8f;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
                             {{/with}}
                             {{/with}}
@@ -205,7 +235,10 @@
                             {{/with}}
                             {{#with buttons.[2]}}
                             {{#if isDanger}}
-                            <a href="{{link}}" class="btn btn-outline-danger">{{text}}</a>
+                            <a href="{{link}}" class="btn btn-outline-danger">
+                                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                                {{text}}
+                            </a>
                             {{/if}}
                             {{/with}}
                             {{/with}}

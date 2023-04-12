@@ -22,17 +22,21 @@
 
 
 
-    <ol class="breadcrumb">
-        {{#each breadcrumb}}
-        <li class="breadcrumb-item px-3">
-            {{#if url}}
-            <a href="{{url}}">{{name}}</a>
+    <div>
+        <ol class="breadcrumb">
+            {{#each breadcrumb}}
+            {{#if @last}}
+            <li class="breadcrumb-item active">
+                {{name}}
+            </li>
             {{else}}
-            <p class="nav-link disabled">{{name}}</p>
+            <li class="breadcrumb-item">
+                <a href="{{url}}">{{name}}</a>
+            </li>
             {{/if}}
-        </li>
-        {{/each}}
-    </ol>
+            {{/each}}
+        </ol>
+    </div>
 
 
 
@@ -82,7 +86,51 @@
                     {{#with brands}}
                     <label class="form-label">{{title}}</label>
                     <input class="form-control" placeholder="{{input.placeholder}}">
+                    <div class="form-check my-3">
+                        {{#each options}}
+                        <label class="form-check-label">{{value}}</label>
+                        <input type="checkbox" class="form-check-input">
+                        <br>
+                        {{/each}}
+                    </div>
                     {{/with}}
+
+                    <hr class="my-3">
+
+                    {{#with price}}
+                    <label class="form-label">{{title}}</label>
+
+                    <p><input class="form-control-sm" placeholder="{{range.from}}"></p>
+                    <p><input class="form-control-sm" placeholder="{{range.to}}"></p>
+
+                    <p><a href="{{button.link}}" class="btn btn-outline-secondary px-3">{{button.text}}</a></p>
+                    {{/with}}
+
+
+                    <hr class="my-3">
+
+
+                    {{#each filterList}}
+
+                    <div class="form-check-label mb-3">
+                        {{title}}
+                    </div>
+
+                    <div class="form-check my-3">
+                        {{#each options}}
+                        <label class="form-check-label">{{value}}</label>
+                        <input type="checkbox" class="form-check-input">
+                        <br>
+                        {{/each}}
+                    </div>
+                    {{#if @last}}
+                    {{else}}
+                    <hr class="my-3">
+                    {{/if}}
+
+
+
+                    {{/each}}
 
 
                     {{/with}}
@@ -91,7 +139,45 @@
         </div>
 
 
+        <div class="col-8 mt-5">
+            {{> catalogItem}}
+        </div>
     </div>
+
+
+
+    <div class="my-5">
+        {{#with service}}
+        <div class="card text-bg-success text-center">
+            <div class="card-body">
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+                {{#each buttons}}
+                <a href="https://www.youtube.com/"><button class="btn btn-primary">{{text}}</button></a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <hr class="mt-5 mb-2">
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2 px-2 mx-3">
+            {{#each this}}
+            <div>
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">
+                    {{this.text}} <br>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+
+
+
 
 
 

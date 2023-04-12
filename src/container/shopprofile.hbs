@@ -1,0 +1,270 @@
+<main>
+    <div class="card p-2 mb-5">
+        <div class="row">
+            <div class="col-7">
+                <h2>
+                    {{navigation.Logo}}
+                </h2>
+            </div>
+            <div class="col-5">
+                <div class="nav d-flex justify-content-end">
+                    {{#each navigation.links}}
+                    <div class="nav-item">
+                        <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{href}}">
+                            {{text}}
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="my-4">{{header}}</h1>
+
+    {{#with purchase}}
+
+
+    <ul class="nav nav-tabs">
+        {{#each tabs}}
+        <li class="nav-item">
+            <a href="#" class="nav-link {{#if @first}} active {{/if}}">{{this}}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <div class="row">
+        {{#with actionBlock}}
+        <div class="col-4 my-4">
+            <input class="form-control" placeholder="{{input.placeholder}}">
+        </div>
+        <div class="col-8 my-4">
+            {{#each buttons}}
+            {{#if isSuccess}}
+            <a href="{{link}}" class="btn btn-success me-2">
+                <i class="fa-solid fa-magnifying-glass" style="color: #90f275;"></i>
+                {{text}}
+            </a>
+            {{/if}}
+            {{#if isOutline}}
+            <a href="{{link}}" class="btn btn-outline-success me-2">
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: #9c9fa5;"></i>
+                {{text}}
+            </a>
+            {{/if}}
+            {{#if isDanger}}
+            <a href="{{link}}" class="btn btn-outline-danger me-2">
+                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                {{text}}
+            </a>
+            {{/if}}
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+
+
+    <hr>
+    {{> purchaseItem}}
+
+    {{/with}}
+
+
+
+    <hr class="my-5">
+
+
+    {{#with userInfo}}
+
+
+    <h2 class="mb-5">{{title}}</h2>
+    <div class="row">
+        <div class="col-12 my-1">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="my-4">{{title}}</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            {{profileData.fullName.surname.title}}:
+                            <b>
+                                <p>{{profileData.fullName.surname.value}}</p>
+                            </b>
+                            {{profileData.otherInfo.birthday.title}}:
+                            <b>
+                                <p>{{profileData.otherInfo.birthday.value}}</p>
+                            </b>
+                            {{#with buttons.[0]}}
+
+                            {{#if isPrimary}}
+                            <a href="{{blink}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+
+                            {{/with}}
+                        </div>
+                        <div class="col-4">
+                            {{profileData.fullName.name.title}}:
+                            <b>
+                                <p>{{profileData.fullName.name.value}}</p>
+                            </b>
+                            {{profileData.otherInfo.sex.title}}:
+                            <b>
+                                <p>{{profileData.otherInfo.sex.value}}</p>
+                            </b>
+                            {{#with buttons.[1]}}
+                            {{#if isSecondary}}
+                            <a href="{{blink}}" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-eraser" style="color: #8f8f8f;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+                            {{/with}}
+                        </div>
+                        <div class="col-4">
+                            {{profileData.fullName.middleName.title}}:
+                            <b>
+                                <p>{{profileData.fullName.middleName.value}}</p>
+                            </b>
+                            {{profileData.otherInfo.language.title}}:
+                            <b>
+                                <p>{{profileData.otherInfo.language.value}}</p>
+                            </b>
+                            {{#with buttons.[2]}}
+                            {{#if isDanger}}
+                            <a href="{{link}}" class="btn btn-outline-danger">
+                                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+                            {{/with}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-1">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="my-4">{{recipients.title}}</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            {{#with recipients.users.[0]}}
+                            <b>
+                                <p>{{name}}</p>
+                            </b>
+                            <p>{{phone}}</p>
+                            {{#with button}}
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
+                            {{/with}}
+                            {{/with}}
+                        </div>
+                        <div class="col-4">
+                            {{#with recipients.users.[1]}}
+                            <b>
+                                <p>{{name}}</p>
+                            </b>
+                            <p>{{phone}}</p>
+                            {{#with button}}
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
+                            {{/with}}
+                            {{/with}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 my-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <h3 class="my-4">{{contacts.title}}</h3>
+                        <div class="col-4">
+                            {{#with contacts}}
+                            {{#with contactData}}
+                            {{phone.title}}
+                            <b>
+                                <p class="my-1 mb-5">{{phone.value}}</p>
+                            </b>
+                            {{/with}}
+                            {{#with buttons.[0]}}
+                            {{#if isPrimary}}
+                            <a href="{{link}}" class="btn btn-primary">
+                                <i class="fa-solid fa-pen" style="color: #fafafa;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+                            {{/with}}
+                            {{/with}}
+                        </div>
+                        <div class="col-4">
+                            {{#with contacts}}
+                            {{#with contactData}}
+                            {{additionalPhone.title}}
+                            <b>
+                                <p class="my-1 mb-5">{{additionalPhone.value}}</p>
+                            </b>
+                            {{/with}}
+                            {{#with buttons.[1]}}
+                            {{#if isSecondary}}
+                            <a href="{{link}}" class="btn btn-outline-secondary">
+                                <i class="fa-solid fa-eraser" style="color: #8f8f8f;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+                            {{/with}}
+                            {{/with}}
+                        </div>
+                        <div class="col-4">
+                            {{#with contacts}}
+                            {{#with contactData}}
+                            {{email.title}}
+                            <b>
+                                <p class="my-1 mb-5">{{email.value}}</p>
+                            </b>
+                            {{/with}}
+                            {{#with buttons.[2]}}
+                            {{#if isDanger}}
+                            <a href="{{link}}" class="btn btn-outline-danger">
+                                <i class="fa-solid fa-ban" style="color: #f90101;"></i>
+                                {{text}}
+                            </a>
+                            {{/if}}
+                            {{/with}}
+                            {{/with}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+
+
+    <hr class="mb-2 mt-5">
+
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2 mx-3">
+            {{#each this}}
+            <div>
+                <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">
+                    {{this.text}}
+                </a>
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+</main>

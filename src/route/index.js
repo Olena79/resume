@@ -12,7 +12,7 @@ var header = {
   },
 
   position: 'Junior Fullstack JS Developer',
-  salary: '60000$ per month',
+  salary: '1000$ per month',
   address: 'Kiev, Ukraine',
 }
 

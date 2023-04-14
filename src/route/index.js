@@ -197,12 +197,12 @@ router.get('/education', function (req, res) {
 
 router.get('/work', function (req, res) {
   res.render('work', {
-    layout: 'big',
     page: {
       title: 'Resume | Work',
     },
     header,
 
+    layout: 'default',
     main: {
       works: [
         {
@@ -219,7 +219,7 @@ router.get('/work', function (req, res) {
           projects: [
             {
               name: 'Resume',
-              url: 'https://it-brains.com.ua/',
+              url: '/index',
               about: 'Сreated a resume in training mode',
               stack: [
                 {

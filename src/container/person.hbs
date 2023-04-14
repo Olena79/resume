@@ -1,81 +1,108 @@
-<div>
+<main class="m-4 p-4">
     {{#with person}}
-    <div>
-        <h1>{{name}}</h1>
+    <div class="my-4">
+        <h1 style="color:rgb(104, 109, 2)">{{name}}</h1>
     </div>
     <div>
-        <em><b>age:</b> ({{age}}) <b>gender:</b> ({{gender}})</em>
+        <em style="color:rgb(37, 7, 156)"><b>age:</b> ({{age}}) <b>gender:</b> ({{gender}})</em>
     </div>
-    <div>
-        <em><b>address:</b> {{address.street}} --
-            {{address.city}} --
-            {{address.state}} --
-            {{address.zip}} --
-            {{address.country}}
+    <div class="my-2">
+        <em>
+            <ol style="color:rgb(37, 7, 156)" class="breadcrumb">
+                <b class="me-4">address:</b>
+                <li class="breadcrumb-item">
+                    {{address.street}}
+                </li>
+                <li class="breadcrumb-item">
+                    {{address.state}}
+                </li>
+                <li class="breadcrumb-item">
+                    {{address.zip}}
+                </li>
+                <li class="breadcrumb-item">
+                    {{address.country}}
+                </li>
+            </ol>
         </em>
     </div>
 
-    <br />
-    <hr />
-    <br />
-    <div>
-        <b>Education:</b>
-    </div>
-    <div>
-        {{#each education}}
-        <div>
-            <u><em>graduated</em></u>: "{{university}}" in {{graduationYear}}
+
+    <hr class="my-2">
+
+    <div class="row">
+        <div class="col-5">
+            <div style="background: rgb(240, 238, 238)" class="card">
+                <div class="card-body">
+                    <div>
+                        <h3 style="color:rgb(104, 109, 2)">Education:</h3>
+                    </div>
+                    <div style="color:rgb(37, 7, 156)" class="py-2">
+                        <div class="row">
+                            {{#each education}}
+                            <div class="col-6">
+                                <b><em>graduated</em></b>:
+                                <br><br><br><br>
+                                <b><em>degree</em></b>:
+                            </div>
+                            <div class="col-6">
+                                "{{university}}" in {{graduationYear}}
+                                <br><br>
+                                {{degree}} <em><br><b>major</b></em>: {{major}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <u><em>degree</em></u>: {{degree}} <em> | <u>major</u></em>: {{major}}
+
+        <div class="col-7">
+            <div style="background: rgb(237, 235, 235)" class="card">
+                <div class="card-body">
+                    {{#each workExperience}}
+                    <h3 style="color:rgb(104, 109, 2)">Work Experience</h3>
+                    <div class="row" style="color:rgb(37, 7, 156)" class="py-2">
+                        <div class="col-4">
+                            <div class=" mt-1">company:</div>
+                            <div class=" my-1">since:</div>
+                            <div class=" my-1">job title:</div>
+                            <div class=" mt-4 mb-2">industry:</div>
+                            <div class=" my-2">from:</div>
+                            <div class=" my-2">to:</div>
+                            <div class=" my-2">My responsibilities:</div>
+                        </div>
+                        <div class="col-8">
+                            <b class=" mt-1">{{company}}</b>
+                            <div class=" my-1">{{year_founded}}</div>
+                            <div class=" my-1">{{title}}</div>
+                            <div class=" mt-4 mb-2">{{industry}}</div>
+                            <div class=" my-2">{{startDate}}</div>
+                            <div class=" my-2">
+                                {{#if endDate}} {{endDate}}
+                                {{else}} (still working...)
+                                {{/if}}
+                            </div>
+                            <div class=" my-2">{{responsibilities}}</div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
         </div>
-        {{/each}}
     </div>
-    <br />
-    <hr />
-    <br />
+
+    <hr class="my-2">
+
     <div>
         {{#each workExperience}}
-        <h2>Work Experience</h2>
-        <ul>
-            <li>
-                <small>company:</small> <b>{{company}}</b>
 
-                <small>||
-                    <u>
-                        since {{year_founded}}
-                    </u>
-                    ||</small>
 
-                <em>({{title}})</em>
-            </li>
-            <li>
-                <small>industry:</small> {{industry}}
-            </li>
-            <li>
-                <small>from</small> <u>{{startDate}}</u> <small>to</small>
-                <u>
-                    {{#if endDate}} {{endDate}}
-                    {{else}} (still working...)
-                    {{/if}}
-                </u>
-            </li>
-            <br>
-            <li>
-                <small>My responsibilities:</small>
-                <br>
-                {{responsibilities}}
-            </li>
-        </ul>
-        <br>
-        <hr>
-        <br>
-        <div>
+        <div class="my-5">
             {{#each employees}}
             <ul>
-                <h3>Employees:</h3>
+                <h3 style="color:rgb(104, 109, 2)" class="my-4">Employees:</h3>
 
-                <li>
+                <li style="color:rgb(37, 7, 156)">
                     {{name}} - ({{position}}) || <small>department:</small> {{department}}
                     <br />
                     <br />
@@ -164,4 +191,4 @@
     </div>
 
     {{/with}}
-</div>
+</main>

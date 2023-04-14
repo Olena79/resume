@@ -21,31 +21,36 @@
 <body>
 	{{#with header}}
 	<header style="color:rgb(46, 6, 113)">
-		<div>
-			<h1>{{name.firstname}} {{name.lastname}}</h1>
-		</div>
-		<div>
-			<b>{{position}}</b>
-		</div>
+		<div class="row">
+			<div class="col-7">
+				<h1>{{name.firstname}} {{name.lastname}}</h1>
+			</div>
+			<div class="col-5">
+				<div class="text-end mb-4">
+					<b>{{position}}</b>
+				</div>
 
-		<br />
+				<div class="text-end">
+					<em>{{salary}}</em>
+				</div>
 
-		<div>
-			<em>{{salary}}</em>
+				<div class="text-end">
+					<address>{{address}}</address>
+				</div>
+
+
+			</div>
 		</div>
-		<br>
-		<hr>
-		<br>
-		<div>
-			<address>{{address}}</address>
-		</div>
+		<hr class="mt-5 mb-3">
 
 
 	</header>
 	{{/with}}
 
 
-	{{> nav}}
+	<div class="text-center">
+		{{> nav}}
+	</div>
 
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}

@@ -219,7 +219,7 @@ router.get('/work', function (req, res) {
           projects: [
             {
               name: 'Resume',
-              url: 'https://it-brains.com.ua/',
+              url: '/index',
               about: 'Сreated a resume in training mode',
               stack: [
                 {

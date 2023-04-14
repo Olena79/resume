@@ -1,13 +1,11 @@
-{{!--
-Це код container файлу для summary сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
---}}
-
-<div>
+<div style="color:rgb(2, 2, 96)">
     {{#with main}}
     <main>
         <section>
-            {{> title data='Work history' big=true}}
+            <div class="text-center">
+                {{> title data='Work history' big=true}}
+            </div>
+
             <div>
                 <p>
                 <ul>
@@ -33,7 +31,7 @@
                         <br />
                         <br />
                         <div>
-                            <strong>Projects ({{projectAmount}})</strong>
+                            <h3 class="text-center">Projects ({{projectAmount}})</h3>
                         </div>
                         <br />
                         <ul>

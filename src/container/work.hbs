@@ -1,85 +1,119 @@
-<div style="color:rgb(2, 2, 96)">
+<div style="color:rgb(3, 3, 121)">
     {{#with main}}
     <main>
         <section>
-            <div class="text-center">
-                {{> title data='Work history' big=true}}
-            </div>
 
-            <div>
-                <p>
-                <ul>
-                    {{#each works}}
-                    <li>
-                        <div>
-                            {{position}}
-                        </div>
-                        <br />
-                        <div>
-                            {{duration.from}} -
-                            {{#if duration.to}} {{duration.to}}
-                            {{else}} (досі працюю)
-                            {{/if}}
-                        </div>
-                        <br />
-                        <div>
-                            {{#if company.url}}
-                            {{> link text=company.name href=company.url blank=true noLine=true}}
-                            {{else}} <b>{{company.name}}</b>
-                            {{/if}}
-                        </div>
-                        <br />
-                        <br />
-                        <div>
-                            <h3 class="text-center">Projects ({{projectAmount}})</h3>
-                        </div>
-                        <br />
-                        <ul>
-                            {{#each projects}}
-                            <li>
-                                <div>
-                                    {{> link text=name href=url blank=true noLine=true}}
-                                </div>
-                                <br />
-                                <div>
-                                    <p>{{about}}</p>
-                                </div>
-                                <br />
-                                <div>
-                                    <em>Project stacks</em> ({{stackAmount}})
-                                </div>
-                                <br />
-                                <div>
-                                    <ul>
-                                        {{#each stack}}
-                                        <li>
-                                            {{name}}
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
-                                <br />
-                                <div>
-                                    <em>Project awards</em>
-                                </div>
-                                <br />
-                                <div>
-                                    <ul>
-                                        {{#each awards}}
-                                        <li>
-                                            {{name}}
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
 
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </li>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width:220px;height:720px;">
+                        <div class="card-body">
+                            <div class="text-center mb-5">
+                                {{> title data='Work history' big=true}}
+                            </div>
+                            <ul>
+                                {{#each works}}
+                                <li>
+                                    <div>
+                                        {{position}}
+                                    </div>
+                                    <br />
+                                    <div>
+                                        {{duration.from}} -
+                                        {{#if duration.to}} {{duration.to}}
+                                        {{else}} (досі працюю)
+                                        {{/if}}
+                                    </div>
+                                    <br />
+                                    <div>
+                                        {{#if company.url}}
+                                        {{> link text=company.name href=company.url blank=true noLine=true}}
+                                        {{else}} <b>{{company.name}}</b>
+                                        {{/if}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="card" style="width:680px;height:720px;">
+                        <div class="card-body">
+                            <div class="m-2">
+                                <h3 class="text-center mb-4">Projects ({{projectAmount}})</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card" style="width:200px;height:620px;">
+                                        <div class="card-body">
+
+                                            <br />
+                                            <ul>
+                                                {{#each projects}}
+                                                <li>
+                                                    <div>
+                                                        {{> link text=name href=url blank=true noLine=true}}
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <p>{{about}}</p>
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <em>Project stacks</em> ({{stackAmount}})
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <ul>
+                                                            {{#each stack}}
+                                                            <li>
+                                                                {{name}}
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <em>Project awards</em>
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <ul>
+                                                            {{#each awards}}
+                                                            <li>
+                                                                {{name}}
+                                                            </li>
+                                                            {{/each}}
+                                                        </ul>
+                                                    </div>
+
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card" style="width:200px;height:620px;">
+                                        <div class="card-body"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card" style="width:200px;height:620px;">
+                                        <div class="card-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                     {{/each}}
-                </ul>
-                </p>
+
+                </div>
             </div>
         </section>
 

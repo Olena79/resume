@@ -142,6 +142,17 @@ router.get('/skills', function (req, res) {
           name: 'Ski',
           isMain: false,
         },
+        {
+          name: 'Self-study',
+        },
+        {
+          name: 'Traveling',
+          isMain: false,
+        },
+        {
+          name: 'Yoga',
+          isMain: false,
+        },
       ],
     },
 

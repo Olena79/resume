@@ -1001,7 +1001,7 @@ router.get('/car', function (req, res) {
     layout: 'basic',
     make: 'Toyota',
     model: 'Camry',
-    year: 2022,
+    year: 2025,
     color: 'silver',
     features: {
       interior: {
@@ -1078,14 +1078,14 @@ router.get('/car', function (req, res) {
       combined: 32,
     },
     price: {
-      base: 25900,
+      base: 36410,
       destination: 995,
       options: {
         navigation: 1200,
         moonroof: 800,
         premium_paint: 595,
       },
-      total: 28990,
+      total: 40000,
     },
   })
   //                  ↑↑ сюди вводимо JSON дані

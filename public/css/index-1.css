@@ -1,0 +1,35 @@
+html {
+  max-width: 1920px;
+  background: rgb(247, 205, 121);
+}
+
+body {
+  margin: 32px;
+  background: #fff;
+}
+
+main,
+header,
+footer,
+nav {
+  margin: 32px;
+}
+
+section {
+  padding: 16px;
+}
+
+div.card {
+  border-radius: 60px;
+}
+
+#btn {
+  color: rgb(116, 83, 18);
+  background: rgb(243, 191, 87);
+  width: 150px;
+  height: 60px;
+}
+
+* {
+  color: rgb(116, 83, 18);
+}

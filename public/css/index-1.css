@@ -21,6 +21,7 @@ section {
 
 div.card {
   border-radius: 60px;
+  background: rgb(248, 225, 180);
 }
 
 #btn {
@@ -30,6 +31,27 @@ div.card {
   height: 60px;
 }
 
+#btns {
+  color: rgb(116, 83, 18);
+  background: rgb(250, 211, 134);
+  width: 150px;
+  height: 40px;
+}
+
 * {
   color: rgb(116, 83, 18);
 }
+
+#option {
+  color: rgb(116, 83, 18);
+  background: rgb(250, 211, 134);
+  width: 80px;
+  height: 50px;
+}
+
+#accordion {
+  color: rgb(116, 83, 18);
+  background: rgb(252, 240, 216);
+}
+
+

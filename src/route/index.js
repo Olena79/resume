@@ -3746,5 +3746,29 @@ router.get('/index-1-1-cof', function (req, res) {
 
 // ================================================================
 
+router.get('/index-1-1-fran', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index-1-1-fran', {
+    layout: 'index-1',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+router.get('/index-1-1-parm', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index-1-1-parm', {
+    layout: 'index-1',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router

@@ -1,4 +1,103 @@
-h1 {
-    background: yellow;
-    color:deepskyblue;
+.card {
+    color:red;  
+}
+
+.card > p {
+    color:rgba(198, 147, 245, 0.45);
+    -webkit-text-fill-color: chartreuse;
+    -webkit-text-stroke: 1px rgb(58, 114, 2);
+}
+
+p:focus,
+p:active,
+p:hover {
+    color:rgba(198, 147, 245, 0.45);
+    -webkit-text-fill-color: chartreuse;
+    -webkit-text-stroke: 1px rgb(58, 114, 2);
+    direction: rtl;
+}
+
+#test {
+    color: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+}
+
+#test1 {
+    color: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+
+    writing-mode: vertical-rl;
+}
+
+#test2 {
+    color: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+
+    text-align: right;
+}
+
+#test3 {
+    color: unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+
+    text-align: justify;
+
+	letter-spacing: 1em;
+}
+
+span {
+    text-align: left;
+    text-transform: uppercase;
+	letter-spacing: 0.5em;
+
+	text-decoration: underline dotted red;
+}
+
+.span-b {
+	text-decoration-color: blue;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+}
+
+.span-b:hover {
+	text-decoration-color: rgb(255, 0, 183);
+	text-decoration-line: line-through;
+	text-decoration-style: double;
+}
+
+pre {
+	tab-size: 4;
+	letter-spacing: 60px;
+}
+
+* {
+	font-family: "Roboto", Helvetica, sans-serif;
+	font-display: swap;
+}
+
+.size {
+	font-size: xx-large;
+	font-style: oblique;
+}
+
+.size1 {
+	font-weight: 900;
+	font-style: italic;
+}
+
+.test {
+	display: none;
+}
+
+.block {
+	display: block;
+	background: rgb(206, 204, 204);
+	margin: auto;
+	width: 50%;
+	height: auto;
+	min-height: 100px;
 }

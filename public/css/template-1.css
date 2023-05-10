@@ -95,6 +95,18 @@
 	margin: 0 auto;
 }
 
+.hero_text {
+	background: gray;
+	width: 200px;
+	height: 100px;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	text-overflow: ellipsis;
+	white-space: pre;
+}
+
 .plans_card:not(:last-of-type) {
 	margin-right: 24px;
 }
@@ -145,3 +157,26 @@
 	font-size: 19px;
 	padding: 9px;
 }
+
+.plans_card:nth-child(2) > .card {
+	visibility: collapse;
+	}
+
+
+
+
+
+
+
+
+	
+	p {
+	background: gray;
+	width: 200px;
+	height: 100px;
+	
+	overflow-y: hidden;
+	overflow-x: hidden;
+	
+	text-overflow: ellipsis;
+	}

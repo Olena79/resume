@@ -1,4 +1,4 @@
-<header class="header row">
+<header class="header">
 	<div>
 		{{> logo}}
 	</div>
@@ -11,6 +11,37 @@
 
 	</nav>
 </header>
+
+
+{{#with hero}}
+<div class="hero">
+	<div class="hero_content">
+		<h1 class="hero_title">{{title}}</h1>
+		<p class="hero_text">{{text}}</p>
+	</div>
+	<img src="{{photo}}" alt="Hero image" class="hero_image">
+</div>
+{{/with}}
+
+
+<main class="blog">
+	{{#each blog}}
+	{{> cardBlog data=this}}
+	{{/each}}
+</main>
+
+
+{{#with form}}
+<div class="form">
+	<div class="form_content">
+		<h3 class="form_title">{{title}}</h3>
+		<p class="form_info">{{info}}</p>
+	</div>
+	<div class="form_action">
+		<a href="{{href}}" class="button form_button">{{button}}</a>
+	</div>
+</div>
+{{/with}}
 
 
 <footer class="footer">

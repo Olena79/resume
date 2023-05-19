@@ -1,0 +1,29 @@
+<header class="header row">
+	<div>
+		{{> logo}}
+	</div>
+
+
+	<nav class="header_nav">
+		<div class="header_nav_right">
+			{{> nav-tem list=header}}
+		</div>
+
+	</nav>
+</header>
+
+
+<footer class="footer">
+	<div>
+		{{> logo}}
+		<span class="footer_copyright">
+			Copyright 2023-2024
+		</span>
+	</div>
+	{{#each footer}}
+	<div>
+		<span class="footer_title">{{title}}</span>
+		{{> nav-tem list=links isVertical=true}}
+	</div>
+	{{/each}}
+</footer>
